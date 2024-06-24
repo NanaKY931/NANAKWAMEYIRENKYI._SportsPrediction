@@ -7,17 +7,16 @@
 <body>
     <h1>Player Rating Prediction</h1>
     <form action="/predict" method="post">
+        <label for="potential">Potential:</label>
+        <input type="text" id="potential" name="potential"><br>
+        <label for="value_eur">Value(in euros):</label>
+        <input type="text" id="value_eur" name="value_eur"><br>
         <label for="age">Age:</label>
         <input type="text" id="age" name="age"><br>
-        <label for="height_cm">Height (cm):</label>
+        <label for="height">Height (cm):</label>
         <input type="text" id="height_cm" name="height_cm"><br>
-        <label for="weight_kg">Weight (kg):</label>
-        <input type="text" id="weight_kg" name="weight_kg"><br>
-        <label for="nationality">Nationality:</label>
-        <input type="text" id="nationality" name="nationality"><br>
-        <label for="club">Club:</label>
-        <input type="text" id="club" name="club"><br>
-        <!-- Add other relevant features here -->
+        <label for="pace">Pace:</label>
+        <input type="text" id="pace" name="pace"><br>
         <input type="submit" value="Predict">
     </form>
 </body>
