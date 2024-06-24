@@ -2,6 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Rating Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Player Rating Prediction</h1>
+    <div>
+        <h2>Player Information</h2>
+        <ul>
+            {% for key, value in player_info.items() %}
+                <li><strong>{{ key }}:</strong> {{ value }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div>
+        <h2>Predicted Rating</h2>
+        <p>Rating: {{ rating }}</p>
+        <p>Confidence Interval: {{ lower_bound }} - {{ upper_bound }}</p>
+        <p>Confidence Level: {{ confidence_level }}%</p>
+    </div>
+    <a href="{{ url_for('index') }}">Predict another player</a>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
     <title>Prediction Result</title>
 </head>
 <body>
